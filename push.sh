@@ -1,6 +1,7 @@
 #!/bin/bash
 #!/usr/bin/php
 # git config --global credential.helper store;
+cnpm i
 hexo d 
 mv ./public ./docs
 git pull;
