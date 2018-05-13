@@ -1,2 +1,2 @@
 # 刘明泰的blog
-see [see](https://lazytai.github.io/blog/public/)
+see [blog](https://lazytai.github.io/blog/)
