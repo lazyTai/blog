@@ -1,6 +1,7 @@
 #!/bin/bash
 #!/usr/bin/php
 # git config --global credential.helper store;
+mv ./public ./docs
 git pull;
 # git add build  -f ;
 git add . ;
