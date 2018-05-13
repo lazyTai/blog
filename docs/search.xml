@@ -3,6 +3,15 @@
   
     
     <entry>
+      <title>关于我</title>
+      <link href="https:%5C/%5C//lazytai.github.io/blog/2018/05/13/about/"/>
+      <url>https:%5C/%5C//lazytai.github.io/blog/2018/05/13/about/</url>
+      <content type="html"><![CDATA[<p>我的github<br><a href="https://github.com/lazyTai/" target="_blank" rel="noopener">https://github.com/lazyTai/</a></p><p>我的sandbox<br><a href="https://codesandbox.io/u/lazyTai/sandboxes" target="_blank" rel="noopener">https://codesandbox.io/u/lazyTai/sandboxes</a></p><p>我的blog<br><a href="https://lazytai.github.io/blog/">https://lazytai.github.io/blog/</a></p><p>我的简历<br><a href="https://lazytai.github.io/blog/">https://lazytai.github.io/blog/</a></p>]]></content>
+      
+      
+    </entry>
+    
+    <entry>
       <title>搭建blog</title>
       <link href="https:%5C/%5C//lazytai.github.io/blog/2018/05/13/%E6%90%AD%E5%BB%BAblog/"/>
       <url>https:%5C/%5C//lazytai.github.io/blog/2018/05/13/%E6%90%AD%E5%BB%BAblog/</url>
