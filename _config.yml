@@ -3,18 +3,18 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 刘明泰blog
 subtitle:
 description:
 keywords:
-author: John Doe
+author: 刘明泰（allenTai）
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
-root: /
+url: https://lazytai.github.io/blog/
+root: ./
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 
