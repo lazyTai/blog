@@ -1,6 +1,7 @@
 #!/bin/bash
 #!/usr/bin/php
 # git config --global credential.helper store;
+hexo d 
 mv ./public ./docs
 git pull;
 # git add build  -f ;
