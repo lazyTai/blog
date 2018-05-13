@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>刘明泰blog 前端工程师</title>
+  <title>搭建blog | 刘明泰blog 前端工程师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="刘明泰blog 前端工程师">
-<meta property="og:url" content="https://lazytai.github.io/blog/index.html">
+  <meta name="description" content="如何搭建一个博客而且还不需要钱我是使用 hexo和github 安装hexo写一个文章发布到github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建blog">
+<meta property="og:url" content="https://lazytai.github.io/blog/2018/05/13/搭建blog/index.html">
 <meta property="og:site_name" content="刘明泰blog 前端工程师">
+<meta property="og:description" content="如何搭建一个博客而且还不需要钱我是使用 hexo和github 安装hexo写一个文章发布到github">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-13T10:56:35.706Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘明泰blog 前端工程师">
+<meta name="twitter:title" content="搭建blog">
+<meta name="twitter:description" content="如何搭建一个博客而且还不需要钱我是使用 hexo和github 安装hexo写一个文章发布到github">
   
     <link rel="alternate" href="/" title="刘明泰blog 前端工程师" type="application/atom+xml">
   
@@ -64,9 +68,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-搭建blog" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-搭建blog" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="https:\/\/lazytai.github.io/blog/2018/05/13/搭建blog/" class="article-date">
   <time datetime="2018-05-13T10:54:28.000Z" itemprop="datePublished">2018-05-13</time>
@@ -79,8 +81,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="https:\/\/lazytai.github.io/blog/2018/05/13/搭建blog/">搭建blog</a>
+    <h1 class="article-title" itemprop="name">
+      搭建blog
     </h1>
   
 
@@ -102,53 +104,74 @@
     </footer>
   </div>
   
-</article>
- 
-
-
-  
-    <article id="post-第一个记录" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="https:\/\/lazytai.github.io/blog/2018/05/13/第一个记录/" class="article-date">
-  <time datetime="2018-05-13T08:46:55.000Z" itemprop="datePublished">2018-05-13</time>
-</a>
     
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="https:\/\/lazytai.github.io/blog/2018/05/13/第一个记录/">第一个记录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <!-- Table of Contents -->
-        
-        <h1 id="我的日记12"><a href="#我的日记12" class="headerlink" title="我的日记12"></a>我的日记12</h1><p>我的github<br><a href="https://github.com/lazyTai/" target="_blank" rel="noopener">https://github.com/lazyTai/</a></p>
-<p>我的sandbox<br><a href="https://codesandbox.io/u/lazyTai/sandboxes" target="_blank" rel="noopener">https://codesandbox.io/u/lazyTai/sandboxes</a></p>
-<p>我的blog<br><a href="https://lazytai.github.io/blog/">https://lazytai.github.io/blog/</a></p>
-
-      
+ <script src="https:\/\/lazytai.github.io/blog/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'https:\/\//lazytai.github.io/blog/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
     </div>
-    <footer class="article-footer">
-      <a data-url="https://lazytai.github.io/bloghttps:\/\/lazytai.github.io/blog/2018/05/13/第一个记录/" data-id="cjh4phyri0001hgrl9jguochq" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
   </div>
+
+    
+<nav id="article-nav">
+  
+  
+    <a href="https:\/\/lazytai.github.io/blog/2018/05/13/第一个记录/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">第一个记录</div>
+    </a>
+  
+</nav>
+
   
 </article>
  
-
-
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
   
 
 </section>
@@ -156,25 +179,20 @@
     <aside id="sidebar">
   
     
-  <div class="widget-wrap">
-     
-        <h3 class="follow-title ">Follow me</h3>
-     
-    <div class="widget follow">
+
+  
+    
+    <div class="widget-wrap">
+    
+      <div class="widget" id="toc-widget-fixed">
       
-              <a class="github" aria-hidden="true" href="https://github.com/lazyTai/" target="_blank" title="Github"></a>
-      
-      
-      
-      
-            <a class="email" aria-hidden="true"  href="mailto:1352983234@qq.com" target="_blank" title="邮箱"></a>
-      
+        <strong class="toc-title">文章目录</strong>
+        <div class="toc-widget-list">
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#如何搭建一个博客而且还不需要钱"><span class="toc-number">1.</span> <span class="toc-text">如何搭建一个博客而且还不需要钱</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装hexo"><span class="toc-number">1.1.</span> <span class="toc-text">安装hexo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#写一个文章"><span class="toc-number">1.2.</span> <span class="toc-text">写一个文章</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#发布到github"><span class="toc-number">1.3.</span> <span class="toc-text">发布到github</span></a></li></ol></li></ol>
+          </div>
+      </div>
     </div>
-  </div>
 
-
-  
-    
   
     
 
@@ -182,32 +200,8 @@
     
   
     
-  <div class="widget-wrap">
-    <h3 class="widget-title recent-posts">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="https:\/\/lazytai.github.io/blog/2018/05/13/搭建blog/">搭建blog</a>
-          </li>
-        
-          <li>
-            <a href="https:\/\/lazytai.github.io/blog/2018/05/13/第一个记录/">第一个记录</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
   
     
-  <div class="widget-wrap">
-    <h3 class="widget-title archive">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="https:\/\/lazytai.github.io/blog/archives/2018/05/">May 2018</a><span class="archive-list-count">2</span></li></ul>
-    </div>
-  </div>
-
 
   
     
