@@ -3,6 +3,7 @@
 # git config --global credential.helper store;
 #cnpm i
 #hexo d 
+rm -rf ./docs
 mv ./public ./docs
 git pull;
 # git add build  -f ;
