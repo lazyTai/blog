@@ -3,7 +3,7 @@
 # git config --global credential.helper store;
 #cnpm i
 #hexo d 
-git pull;
+git pull https://github.com/lazyTai/demo.git master;
 # git add build  -f ;
 git add . ;
 git commit -a -m 'git auto commit'
