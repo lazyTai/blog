@@ -3,15 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>归档 | 刘明泰blog 前端工程师</title>
+  <title>docker | 刘明泰blog 前端工程师</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="刘明泰blog 前端工程师">
-<meta property="og:url" content="https://lazytai.github.io/blog/archives/index.html">
+  <meta name="description" content="docker入门学习必须学会这个这是写的我的bookdocker_book">
+<meta property="og:type" content="article">
+<meta property="og:title" content="docker">
+<meta property="og:url" content="https://lazytai.github.io/blog/2018/05/13/docker/index.html">
 <meta property="og:site_name" content="刘明泰blog 前端工程师">
+<meta property="og:description" content="docker入门学习必须学会这个这是写的我的bookdocker_book">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-05-14T01:39:20.651Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘明泰blog 前端工程师">
+<meta name="twitter:title" content="docker">
+<meta name="twitter:description" content="docker入门学习必须学会这个这是写的我的bookdocker_book">
   
     <link rel="alternate" href="/" title="刘明泰blog 前端工程师" type="application/atom+xml">
   
@@ -64,97 +68,110 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-         <span class="archive-year-post">4 post  this year</span>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/05/13/docker/" class="archive-article-date">
-  <time datetime="2018-05-13T12:00:42.000Z" itemprop="datePublished">05-13</time>
+        <section id="main"><article id="post-docker" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/05/13/docker/" class="article-date">
+  <time datetime="2018-05-13T12:00:42.000Z" itemprop="datePublished">2018-05-13</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/13/docker/">docker</a>
+    <h1 class="article-title" itemprop="name">
+      docker
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/05/13/about/" class="archive-article-date">
-  <time datetime="2018-05-13T11:03:07.000Z" itemprop="datePublished">05-13</time>
-</a>
+    <div class="article-entry" itemprop="articleBody">
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/13/about/">关于我</a>
-    </h1>
-  
+        <!-- Table of Contents -->
+        
+        <p>docker入门学习<br>必须学会这个<br>这是写的我的book<br><a href="http://47.75.167.196:4000/book_docker/_book/" target="_blank" rel="noopener">docker_book</a></p>
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/05/13/搭建blog/" class="archive-article-date">
-  <time datetime="2018-05-13T10:54:28.000Z" itemprop="datePublished">05-13</time>
-</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/13/搭建blog/">搭建blog</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/05/13/第一个记录/" class="archive-article-date">
-  <time datetime="2018-05-13T08:46:55.000Z" itemprop="datePublished">05-13</time>
-</a>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://lazytai.github.io/blog/2018/05/13/docker/" data-id="cjh5kz0gp0000sgrlj1am9vvo" class="article-share-link">分享</a>
       
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/13/第一个记录/">第一个记录</a>
-    </h1>
-  
-
-    </header>
+      
+      
+    </footer>
   </div>
+  
+    
+ <script src="/jquery/jquery.min.js"></script>
+  <div id="random_posts">
+    <h2>推荐文章</h2>
+    <div class="random_posts_ul">
+      <script>
+          var random_count =4
+          var site = {BASE_URI:'/'};
+          function load_random_posts(obj) {
+              var arr=site.posts;
+              if (!obj) return;
+              // var count = $(obj).attr('data-count') || 6;
+              for (var i, tmp, n = arr.length; n; i = Math.floor(Math.random() * n), tmp = arr[--n], arr[n] = arr[i], arr[i] = tmp);
+              arr = arr.slice(0, random_count);
+              var html = '<ul>';
+            
+              for(var j=0;j<arr.length;j++){
+                var item=arr[j];
+                html += '<li><strong>' + 
+                item.date + ':&nbsp;&nbsp;<a href="' + (site.BASE_URI+item.uri) + '">' + 
+                (item.title || item.uri) + '</a></strong>';
+                if(item.excerpt){
+                  html +='<div class="post-excerpt">'+item.excerpt+'</div>';
+                }
+                html +='</li>';
+                
+              }
+              $(obj).html(html + '</ul>');
+          }
+          $('.random_posts_ul').each(function () {
+              var c = this;
+              if (!site.posts || !site.posts.length){
+                  $.getJSON(site.BASE_URI + 'js/posts.js',function(json){site.posts = json;load_random_posts(c)});
+              } 
+               else{
+                load_random_posts(c);
+              }
+          });
+      </script>
+    </div>
+  </div>
+
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2018/05/13/about/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">关于我</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
+ 
+     
+  <div class="comments" id="comments">
+    
+     
+       
+      <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+    
+       
+      
+      
+  </div>
+ 
   
 
 </section>
@@ -199,13 +216,6 @@
 
   
     
-  <div class="widget-wrap">
-    <h3 class="widget-title archive">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">4</span></li></ul>
-    </div>
-  </div>
-
 
   
     
